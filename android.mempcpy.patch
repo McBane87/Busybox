@@ -1,0 +1,17 @@
+--- ../../Busybox_Test/busybox-1.23.2/libbb/replace.c	2015-07-18 09:38:42.031486000 +0200
++++ libbb/replace.c	2015-07-22 15:25:06.826234970 +0200
+@@ -11,6 +11,14 @@
+ 
+ #include "libbb.h"
+ 
++#if defined(ANDROID) || defined(__ANDROID__)
++#undef mempcpy
++void ALWAYS_INLINE *mempcpy(void *dest, const void *src, size_t len)
++{
++        return memcpy(dest, src, len) + len;
++}
++#endif
++
+ unsigned FAST_FUNC count_strstr(const char *str, const char *sub)
+ {
+ 	size_t sub_len = strlen(sub);
