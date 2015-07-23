@@ -2,9 +2,9 @@
 Building Busybox with Android-NDK results for me in a not completely working "mount" applet.<br>
 <br>
 Without SELInux:<br>
- - busybox.custom.ndk.config<br>
+&nbsp;&nbsp; busybox.custom.ndk.config<br>
 With SELinux:<br>
- - busybox.custom.selinux.ndk.config<br>
+&nbsp;&nbsp; busybox.custom.selinux.ndk.config<br>
 <br>
 Note:<br> 
 cust_libs and cust_includes are only necessary for NDK Build<br>
@@ -16,6 +16,6 @@ Building Busybox with a native ARM-Machine like my Cubietruck results in a norma
 And it looks like the resuting Busybox is usable for Android.<br>
 <br>
 Without SELInux:<br>
- - busybox.custom.cubie.config<br>
+&nbsp;&nbsp; busybox.custom.cubie.config<br>
 With SELinux:<br>
- - busybox.custom.selinux.cubie.config<br>
+&nbsp;&nbsp; busybox.custom.selinux.cubie.config<br>
